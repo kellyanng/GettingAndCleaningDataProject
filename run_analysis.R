@@ -31,5 +31,5 @@ combinedData <- cbind(subjectIds, activityIds, combinedData)
 
 # Get the average of each measurement type per subject per activity
 averageValues <- group_by(combinedData, SubjectId, ActivityId)
-averageValues <- summarize_each(averageValues, funs(median))
+averageValues <- summarize_each(averageValues, funs(mean))
 
